@@ -4,6 +4,7 @@ body {
     background-image: linear-gradient(135deg, #FAD7A1 0%, #E96D71 100%);
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 .header-content {
@@ -57,6 +58,7 @@ body {
     text-transform: uppercase;
     transition: .5s;
     box-shadow: 0px 5px 13px 0px black;
+    outline: none;
 }
 
 .header-content_download:hover {
@@ -67,6 +69,8 @@ body {
     transition: .5s;
 }
 
+
+/* Hero Section */
 .hero-content {
     height: 300px;
     width: 100vw;
@@ -91,6 +95,10 @@ body {
     width: 50%;
     right: 0;
     top: 0;
+}
+
+.hero-content__image {
+    height: inherit;
 }
 
 .hero-content__content {
@@ -142,9 +150,33 @@ body {
     margin-top: -50px;
 }
 
-@media (max-width: 700px) {
+main {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Description Projects */
+.description-container {
+    width: 100%;
+    margin-top: 170px;
+    text-align: center;
+}
+
+.description-container span {
+    font-weight: bolder;
+}
+
+.description-container i {
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+@media (max-width: 800px) {
     .header-content {
-        margin: 10px 10px;
+        margin: 10px 0;
     }
 
     .header-menu {
@@ -158,5 +190,47 @@ body {
 
     .header-content_download span {
         display: none;
+    }
+
+    .hero-content {
+        height: 500px;
+    }
+
+    .hero-container__content {
+        top: initial;
+        height: initial;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hero-content__content p {
+        margin: 0 30px 20px 30px;
+    }
+
+    .hero-container__image {
+        height: 300px;
+        width: 100%;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
+
+    .hero-content__image img {
+        position: relative;
+        width: 400px;
+        margin-top: -90px;
+        z-index: -1;
+    }
+
+    .hero-content__content {
+        margin: 0;
+        width: 100%;
+    }
+
+    .description-container {
+        margin-top: 50px;
     }
 }
